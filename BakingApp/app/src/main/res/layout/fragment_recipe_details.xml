@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frag_recipe_details_nestedscroll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/ingredients_label"
+            style="@style/LabelsRecipeDetailsStyle"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:text="@string/ingredients_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_recipe_ingredients"
+            style="@style/RecyclersRecipeDetailsStyle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ingredients_label" />
+
+        <TextView
+            android:id="@+id/steps_label"
+            style="@style/LabelsRecipeDetailsStyle"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recycler_recipe_ingredients"
+            tools:text="Steps:" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_recipe_steps"
+            style="@style/RecyclersRecipeDetailsStyle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/steps_label" />
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

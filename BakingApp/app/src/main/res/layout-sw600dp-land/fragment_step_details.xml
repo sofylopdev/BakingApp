@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/video_image_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+                android:id="@+id/step_video"
+                style="@style/ExoplayerStyle"
+                android:layout_height="300dp" />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/step_image"
+            style="@style/StepImagePlaceholderStyle" />
+
+        <TextView
+            android:id="@+id/step_description"
+            style="@style/StepDescriptionStyle" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

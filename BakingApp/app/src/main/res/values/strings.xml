@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">BakingApp</string>
+
+    <!--Main activity-->
+    <string name="recipe_image">Recipe image</string>
+    <string name="nr_of_servings">Servings: %1$d</string>
+    <string name="add_widget">\ Add Widget</string>
+
+    <!--Recipe Details Activity-->
+    <string name="ingredients_label">Ingredients:</string>
+    <string name="step_list_label">Steps (%1$d):</string>
+    <string name="ingredient_name">- %1$s</string>
+    <string name="quantity_and_measure">%.01f %2$s</string>
+
+    <!--Steps Activity and Fragment-->
+    <string name="steps_activity_title">%1$s Recipe Steps</string>
+    <string name="step_title_tab">STEP %1$d</string>
+    <string name="step_image_placeholder">No video available</string>
+    <string name="step_list_item_content">%1$d. %2$s</string>
+
+    <!--Widget-->
+    <string name="appwidget_text">Choose a favorite recipe</string>
+
+    <!--Error Messages-->
+    <string name="call_failed">Sorry, there was an error, please try again.</string>
+    <string name="response_unsuccessful">We couldn\'\t get the recipes from the server.</string>
+
+</resources>

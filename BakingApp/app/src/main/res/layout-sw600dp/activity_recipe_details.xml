@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    tools:context=".ui.RecipeDetailsActivity">
+
+    <!--The static RecipeDetailsFragment-->
+    <fragment
+        android:id="@+id/static_fragment_container"
+        android:name="com.sofialopes.android.bakingapp.ui.RecipeDetailsFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:layout_weight="1" />
+
+    <!--A small divider-->
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@android:color/darker_gray" />
+
+    <!--The dynamic fragment-->
+    <FrameLayout
+        android:id="@+id/step_details_container"
+        android:layout_gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2" />
+</LinearLayout>
