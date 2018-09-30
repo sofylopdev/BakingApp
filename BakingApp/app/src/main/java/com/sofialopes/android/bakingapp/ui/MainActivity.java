@@ -92,17 +92,16 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.MainA
         Intent intent = getIntent();
         mExtras = intent.getExtras();
 
-        if (mExtras != null) {
-            //Starting from the widget
-            if (mExtras.containsKey(AppWidgetManager.EXTRA_APPWIDGET_ID)) {
-                mAppWidgetId = mExtras.getInt(AppWidgetManager.EXTRA_APPWIDGET_ID,
-                        AppWidgetManager.INVALID_APPWIDGET_ID);
+        //Starting from the widget
+        if (mExtras != null && mExtras.containsKey(AppWidgetManager.EXTRA_APPWIDGET_ID)) {
+            mAppWidgetId = mExtras.getInt(AppWidgetManager.EXTRA_APPWIDGET_ID,
+                    AppWidgetManager.INVALID_APPWIDGET_ID);
 
-                //Setting the recipe in the widget for the first time
-                // activity shows the add widget button:
-                mAdapter = new MainAdapter(this, null, this, true);
-                mRecipesRecycler.setAdapter(mAdapter);
-            }
+            //Setting the recipe in the widget for the first time
+            // activity shows the add widget button:
+            mAdapter = new MainAdapter(this, null, this, true);
+            mRecipesRecycler.setAdapter(mAdapter);
+
         } else {
             //Not starting the activity from the widget
             mAdapter = new MainAdapter(this, null, this, false);
